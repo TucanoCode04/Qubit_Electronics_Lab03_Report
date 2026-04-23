@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/opt/qtcad-1.2.6/qtcad")
+sys.path.append("/opt/qtcad-2.1.4/src/qtcad")
 __copyright__ = "Copyright 023, Nanoacademic Technologies Inc."
 
 import numpy as np
