@@ -1,0 +1,188 @@
+\chapter{Analysis of the QTCAD Script}
+
+\section{Mesh import and unit conversion}
+The first relevant part of \texttt{double\_dot\_stability.py} is the import of the mesh generated with Gmsh:
+
+\begin{lstlisting}[language=Python, caption={Mesh loading in the QTCAD script.}]
+scaling = 1e-9
+mesh = Mesh(scaling, str(path_mesh / "dqdfdsoi.msh2"))
+\end{lstlisting}
+
+These lines appear at lines 45--46 of the script. Their role is to load the three-dimensional structure from the file \texttt{dqdfdsoi.msh2} and convert its coordinates into SI units. This conversion is necessary because the geometry file \texttt{dqdfdsoi.geo} is written in nanometers, as explicitly stated in line 3 of the mesh source. Therefore, the factor \texttt{1e-9} converts all mesh coordinates from nanometers to meters before they are used by QTCAD.
+
+From the point of view of the \texttt{Mesh} class, the two arguments have different roles:
+\begin{itemize}
+    \item the first argument, \texttt{scaling}, is the geometric conversion factor applied to the coordinates of the mesh nodes;
+    \item the second argument is the path of the Gmsh file to be imported, here given as the string corresponding to \texttt{meshes/dqdfdsoi.msh2}.
+\end{itemize}
+
+This means that the same mesh can be reused in QTCAD without rewriting the geometry, provided that the correct spatial scaling is supplied at import time.
+
+\section{Definition of the device and operating temperature}
+Once the mesh has been loaded, the script creates the device object:
+
+\begin{lstlisting}[language=Python, caption={Device creation and temperature assignment.}]
+dvc = Device(mesh, conf_carriers='e')
+dvc.set_temperature(0.1)
+\end{lstlisting}
+
+These lines correspond to lines 49--50. The first line constructs a \texttt{Device} object on top of the imported mesh. The first argument is the mesh itself, which contains the geometry and the physical regions. The keyword argument \texttt{conf\_carriers='e'} specifies that the confined carriers are electrons. This is consistent with the fact that the script later studies the conduction-band profile and the electronic bound states of the double quantum dot.
+
+The second line sets the operating temperature to \SI{0.1}{\kelvin}. Such a cryogenic temperature is coherent with the physical context of semiconductor quantum dots, which are typically operated at millikelvin temperatures to suppress thermal excitations and observe quantum phenomena.
+\section{Region names, assigned materials, and correspondence with the mesh}
+After the device object is created, the script assigns materials to the physical regions declared in the mesh. This correspondence is essential: the names used in \texttt{double\_dot\_stability.py} must match the physical volume names defined in \texttt{dqdfdsoi.geo}, otherwise QTCAD would not be able to associate the material parameters with the correct parts of the structure.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{2.5cm}|p{1.6cm}|p{4.4cm}|c|c|}
+\hline
+\textbf{Region name} & \textbf{Material} & \textbf{Meaning} & \textbf{Script line} & \textbf{Mesh line} \\
+\hline
+\texttt{oxide} & \texttt{SiO2} & Lateral oxide region & 53 & 76 \\
+\hline
+\texttt{oxide\_dot} & \texttt{SiO2} & Oxide around active dot region & 54 & 78 \\
+\hline
+\texttt{gate\_oxide} & \texttt{HfO2} & Gate dielectric & 55 & 63 \\
+\hline
+\texttt{gate\_oxide\_dot} & \texttt{HfO2} & Gate dielectric in active region & 56 & 62 \\
+\hline
+\texttt{buried\_oxide} & \texttt{SiO2} & BOX layer & 57 & 99 \\
+\hline
+\texttt{buried\_oxide\_dot} & \texttt{SiO2} & BOX below active region & 58 & 100 \\
+\hline
+\texttt{channel} & \texttt{Si} & Silicon channel & 59 & 75 \\
+\hline
+\texttt{channel\_dot} & \texttt{Si} & Silicon region where the dots form & 60 & 77 \\
+\hline
+\texttt{source} & \texttt{Si}, n-doped & Source reservoir & 61 & 73 \\
+\hline
+\texttt{drain} & \texttt{Si}, n-doped & Drain reservoir & 62 & 74 \\
+\hline
+\end{tabular}
+\caption{Correspondence between script regions and physical volumes defined in the mesh.}
+\label{tab:region-map}
+\end{table}
+
+The table shows that the naming is intentionally identical in the Python script and in the mesh. The doped regions are \texttt{source} and \texttt{drain}, both declared as silicon with \texttt{ndoping=1e20*1e6}. The factor \texttt{1e6} converts the doping from \(\mathrm{cm^{-3}}\) to \(\mathrm{m^{-3}}\), so the implemented concentration is \(10^{20}\,\mathrm{cm^{-3}}\).
+
+It is also worth noting that the active dot region is not limited to \texttt{channel\_dot}. The list later used for the quantum-dot calculation also includes the dielectric regions \texttt{oxide\_dot}, \texttt{gate\_oxide\_dot}, and \texttt{buried\_oxide\_dot}. This choice preserves the local electrostatic environment of the dots instead of isolating only the silicon volume.
+
+\begin{lstlisting}[language=Python, caption={Material assignment to the main regions.}]
+dvc.new_region("oxide", mt.SiO2)
+dvc.new_region("oxide_dot", mt.SiO2)
+dvc.new_region("gate_oxide", mt.HfO2)
+dvc.new_region("gate_oxide_dot", mt.HfO2)
+dvc.new_region("buried_oxide", mt.SiO2)
+dvc.new_region("buried_oxide_dot", mt.SiO2)
+dvc.new_region("channel", mt.Si)
+dvc.new_region("channel_dot", mt.Si)
+dvc.new_region("source", mt.Si, ndoping=1e20*1e6)
+dvc.new_region("drain", mt.Si, ndoping=1e20*1e6)
+\end{lstlisting}
+
+\section{Boundary conditions and definition of the dot region}
+The next stage of the script defines the electrostatic boundary conditions. The gate boundaries are introduced through the method \texttt{new\_gate\_bnd}, for example:
+
+\begin{lstlisting}[language=Python, caption={Gate boundaries in the QTCAD script.}]
+Ew = mt.Si.Eg/2 + mt.Si.chi
+dvc.new_gate_bnd("barrier_gate_1_bnd", barrier_gate_1_bias, Ew)
+\end{lstlisting}
+
+The arguments of \texttt{new\_gate\_bnd} are:
+\begin{itemize}
+    \item the name of the physical surface on which the boundary condition is applied;
+    \item the applied gate voltage;
+    \item the metal work function, here chosen as \texttt{Ew}, namely the silicon midgap reference \(E_g/2 + \chi\).
+\end{itemize}
+
+In this script, the boundary names are again consistent with the mesh file, where the same physical surfaces are declared. The gate, contact, and back-gate boundaries are summarized below.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{3.2cm}|p{1.3cm}|c|c|c|}
+\hline
+\textbf{Boundary name} & \textbf{Type} & \textbf{Bias [V]} & \textbf{Script line} & \textbf{Mesh line} \\
+\hline
+\texttt{barrier\_gate\_1\_bnd} & gate & 0.5 & 74 & 55 \\
+\hline
+\texttt{plunger\_gate\_1\_bnd} & gate & 0.6 & 75 & 56 \\
+\hline
+\texttt{barrier\_gate\_2\_bnd} & gate & 0.5001 & 76 & 57 \\
+\hline
+\texttt{plunger\_gate\_2\_bnd} & gate & 0.6 & 77 & 58 \\
+\hline
+\texttt{barrier\_gate\_3\_bnd} & gate & 0.5 & 78 & 59 \\
+\hline
+\texttt{source\_bnd} & ohmic & -- & 79 & 69 \\
+\hline
+\texttt{drain\_bnd} & ohmic & -- & 80 & 70 \\
+\hline
+\texttt{back\_gate\_bnd} & frozen & -0.5 & 81--82 & 93--96 \\
+\hline
+\end{tabular}
+\caption{Boundary conditions used in the QTCAD script and their correspondence with the mesh.}
+\label{tab:boundary-map}
+\end{table}
+
+The dot region is then explicitly identified at lines 85--86:
+
+\begin{lstlisting}[language=Python, caption={Definition of the active dot region.}]
+dot_region_list = ["oxide_dot", "gate_oxide_dot",
+                   "buried_oxide_dot", "channel_dot"]
+dvc.set_dot_region(dot_region_list)
+\end{lstlisting}
+
+Therefore, the materials that compound the dot region are:
+\begin{itemize}
+    \item \texttt{Si} for \texttt{channel\_dot};
+    \item \texttt{SiO2} for \texttt{oxide\_dot};
+    \item \texttt{HfO2} for \texttt{gate\_oxide\_dot};
+    \item \texttt{SiO2} for \texttt{buried\_oxide\_dot}.
+\end{itemize}
+
+This confirms that the active region used by the solvers is not only the silicon island itself, but the local portion of the structure that determines the confinement and dielectric screening around it.
+
+\section{Poisson and Schrodinger Solver Setup and Execution}
+The concluding part of the script is devoted to the definition of the Poisson and Schrodinger solvers, the assignment of their parameters, and the execution of the corresponding calculations. The structure of the script is summarized in Table~\ref{tab:solver-lines}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{8.3cm}|c|}
+\hline
+\textbf{Operation} & \textbf{Line(s)} \\
+\hline
+Instantiation of Poisson solver parameters: \texttt{params\_poisson = PoissonSolverParams()} & 89 \\
+\hline
+Definition of Poisson parameter values & 90--100 \\
+\hline
+Definition of the number of single-particle states: \texttt{num\_states = 4} & 103 \\
+\hline
+Instantiation of Schrodinger solver parameters: \texttt{params\_schrod = SchrodingerSolverParams()} & 106 \\
+\hline
+Assignment of the number of states: \texttt{params\_schrod.num\_states = num\_states} & 107 \\
+\hline
+Instantiation of the Poisson solver: \texttt{poisson\_slv = PoissonSolver(...)} & 110--111 \\
+\hline
+Solution of the Poisson problem: \texttt{poisson\_slv.solve()} & 114 \\
+\hline
+Transfer of the electrostatic potential into the confinement potential: \texttt{dvc.set\_V\_from\_phi()} & 118 \\
+\hline
+Creation of the submesh for the active region: \texttt{submesh = SubMesh(...)} & 121 \\
+\hline
+Creation of the subdevice: \texttt{subdvc = SubDevice(...)} & 124 \\
+\hline
+Instantiation of the Schrodinger solver: \texttt{schrod\_solver = SchrodingerSolver(...)} & 127 \\
+\hline
+Solution of the Schrodinger problem: \texttt{schrod\_solver.solve()} & 130 \\
+\hline
+\end{tabular}
+\caption{Main steps of the Poisson--Schrodinger workflow in \texttt{double\_dot\_stability.py}.}
+\label{tab:solver-lines}
+\end{table}
+
+This sequence shows that the script first solves the electrostatic problem on the complete device and only afterwards solves the quantum problem on the restricted active region. The intermediate line \texttt{dvc.set\_V\_from\_phi()} is the key step that connects the two parts of the simulation, because it converts the electrostatic solution into the confinement potential used for the electronic eigenstates.
+
+\section{Physical interpretation}
+Overall, the script implements a two-step description of the device. The complete geometry is first used to reconstruct the electrostatic environment generated by the gates, the contacts, and the dielectric stack. This electrostatic solution is then converted into the confinement potential used in the Schrodinger calculation, which is restricted to the active region of the double quantum dot.
+
+The script is therefore organized so that the physical definition of the device directly feeds the calculation of its lowest electronic states.
