@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex homebook.idx"] 1777281225.21429 "homebook.idx" "homebook.ind" "homebook" 1777281363.2175 0
-  "homebook.idx" 1777281362.16421 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex homebook.idx"] 1777284382.76722 "homebook.idx" "homebook.ind" "homebook" 1777285397.48117 0
+  "homebook.idx" 1777285395.80273 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "homebook.ilg"
   "homebook.ind"
   (rewritten before read)
-["pdflatex"] 1777281361.52294 "/home/klakson/Desktop/uni_master/first_year/second_semester/Qubit Electronics/labs/lab3/report/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" "homebook.pdf" "homebook" 1777281363.21772 0
+["pdflatex"] 1777285395.16232 "/home/klakson/Desktop/uni_master/first_year/second_semester/Qubit Electronics/labs/lab3/report/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" "homebook.pdf" "homebook" 1777285397.48138 0
   "/etc/texmf/web2c/texmf.cnf" 1774005325.26675 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/klakson/Desktop/uni_master/first_year/second_semester/Qubit Electronics/labs/lab3/report/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" 1777269673.40347 2900 56560a31a548207137ca3bcf49592ad2 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -36,6 +36,8 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm" 1136768653 1120 2b3f9b25605010c69bc328bea6ac000f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -109,12 +111,13 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1774005348.12989 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1774005484 8214427 0cb22ae05101bc55f778cf89f77045eb ""
-  "homebook.aux" 1777281363.11821 881 4287a09b2a3fd8b424bf0ec3c483a65e "pdflatex"
-  "homebook.ind" 1777281225.35913 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
+  "homebook.aux" 1777285397.38273 1345 99b86134c0abbc8cdea1ac0e081c28fe "pdflatex"
+  "homebook.ind" 1777284382.92603 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
   "homebook.tex" 1777269673.40347 2900 56560a31a548207137ca3bcf49592ad2 ""
-  "homebook.toc" 1777281363.11921 307 6298963f4c582867a0b6595815243f76 "pdflatex"
+  "homebook.toc" 1777285397.38373 471 57f37e6f198d1608a65c6d620a334c31 "pdflatex"
   "leo_part/dqdot_y.jpeg" 1777275518.32309 50011 bb48dc320c6b92167811670f5d8f8145 ""
-  "leo_part/leo.tex" 1777281361.16321 5089 191db14c9e782ad748a41646f1ea244c ""
+  "leo_part/leo.tex" 1777285392.53614 8078 586d40fb5110fbe34ff359944fbcc3e1 ""
+  "leo_part/mesh_imag.png" 1777284324.27303 575643 3f09b0213c9e46931d147fdf1c43138b ""
   "logopoli.png" 1774882310.73026 312859 163d44ec6d244c6e95dd034bbd631798 ""
   (generated)
   "homebook.aux"

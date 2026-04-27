@@ -43,3 +43,42 @@ At the end of the script, the structure is saved in two different formats, each 
     \item \textbf{.geo\_unrolled:} This is a "flat" version of the geometry script. Since the original code uses loops (\texttt{For}) and variables, the unrolled version expands everything into raw, explicit Gmsh commands. It is extremely useful for debugging, as it allows the user to see exactly which tags and IDs were assigned to every single point, line, or surface created during the generation process. However, The use of the \texttt{OpenCASCADE} kernel and advanced boolean operations like \texttt{BooleanFragments} leads to a \texttt{.geo\_unrolled} file that contains a \texttt{Merge} command pointing to a \texttt{.xao} file, where Gmsh serializes the internal CAD state into the \texttt{.xao} (OpenCASCADE ASCII) format, which stores the Boundary Representation (B-Rep) of the fragmented structure.
 \end{itemize}
 
+\section{Mesh generation and visualization}
+After executing the Gmsh script, several files are automatically generated in the working directory:
+\begin{itemize}
+    \item \textbf{dqdfdsoi.msh2:} The primary output file containing the discretized geometry (nodes and elements) and the mapping of physical groups.
+    \item \textbf{dqdfdsoi.geo\_unrolled:} A flattened version of the input script where all loops and variables are resolved.
+    \item \textbf{dqdfdsoi.geo\_unrolled.xao:} An OpenCASCADE-specific file, since we used the OpenCASCADE factory.
+\end{itemize}
+As discussed previously, the \texttt{.geo\_unrolled} file in this case does not show the individual points and lines but rather a \texttt{Merge} command of the \texttt{.xao} file.
+
+\section{Dimensions and Geometric Analysis}
+\begin{figure}[H]
+    \center  
+    \includegraphics[width=1\textwidth]{leo_part/mesh_imag.png}
+    \caption{Image of the resulting mesh of the device}
+    \label{mesh_figure}
+\end{figure}
+The total dimensions of the device are determined by the combination of all previouslydefined parameters:
+\begin{itemize}
+    \item \textbf{X direction (Width):} Defined by \texttt{domain\_width} = $60$ nm.
+    \item \textbf{Y direction (Length):} Calculated as the sum of the source/drain lengths and the central channel length:
+    \begin{equation}
+        domain\_len = 2* 20 + 90  = 130 \text{ nm}
+    \end{equation}
+    where 
+    \begin{equation}
+        channel\_len = 30 \text{ nm (gaps)} + 30 \text{ nm (barriers gates)} + 30 \text{ nm (plungers gates)} = 90 nm
+    \end{equation}
+    Is the lenght of the central channel, where the quantum dots are located.
+    \item \textbf{Z direction (Thickness):} The total depth is the sum of the three extruded layers:
+    \begin{equation}
+        Z_{total} = gate\_oxide\_thick + film\_thick + box\_thick = 2 + 10 + 10 = 22 \text{ nm}
+    \end{equation}
+\end{itemize}
+
+The construction of the device in Gmsh follows a hierarchy of base classes, evolving from points (0D) to define spatial coordinates, which serve as the foundation for lines (1D) and surfaces (2D). In our simulation, the two-dimensional layout is generated using the \texttt{Rectangle} command, while the higher-order class, the volume (3D), is defined through the extrusion process.
+
+However, the geometric definition of these classes is insufficient for executing a physical simulation; in fact, \textbf{Physical Groups} are assigned to each geometric entity. This operation transforms simple mathematical objects into functional physical domains with specific meaning for \textbf{QTCAD}. Without this mapping, the solver would be unable to distinguish between an oxide volume and a silicon volume, nor would it know which specific surfaces are designated for the application of electrostatic potentials.
+
+QTCAD utilizes these identifiers to associate mesh nodes with material properties (such as electrical permittivity and effective mass), doping concentrations and voltages applied.
