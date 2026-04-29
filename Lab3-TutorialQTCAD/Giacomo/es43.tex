@@ -1,27 +1,25 @@
 \section{File Q.vtu}
-The Q.vtu file contains the spatial probability density ($|\psi(\mathbf{r})|^2$) of the electron for the energy eigenstates solved by the Schrödinger equation. We begin by observing the 2D density maps obtained by slicing the plane at $z = -2.5$.
-
+The Q.vtu file contains the spatial probability density ($|\psi(\mathbf{r})|^2$) of the electron for the energy eigenstates solved by the Schrödinger equation. We begin by observing the 2D density maps obtained by slicing the plane at $z = -2.5$nm.
 % --- PRIMO BLOCCO: Due immagini affiancate ---
 \begin{figure}[H]
     \centering
     
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.40\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Giacomo/Foto_ground.png} 
+        \includegraphics[width=0.85\textwidth]{Giacomo/Foto_ground.png} 
         \caption{Ground state}
         \label{fig:foto1}
     \end{subfigure}
     \hfill 
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.40\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{Giacomo/Foto_excited.png}
+        \includegraphics[width=0.85\textwidth]{Giacomo/Foto_excited.png}
         \caption{First excited state}
         \label{fig:foto2}
     \end{subfigure}
     
     \caption{Solution of the Schrödinger equation}
 \end{figure}
-
 The results show that the ground state is strongly localized within one specific quantum dot, while the first excited state is localized in the second dot.
 
 This observation is fundamental to notice a clear asymmetry in the system. In this simulation, the asymmetry is introduced by the adaptive mesh, which slightly alters the confinement potential. However, this is needed to simulate a real physical scenario: at a fabrication level, it is impossible to make two completely identical quantum dots. Because of this physical asymmetry, the first two states of the entire system are essentially the individual ground states of each dot, which sit at slightly different energies.
@@ -33,7 +31,7 @@ One way to see these energy differences is by analyzing the following graph:
     \centering
     % Qui puoi decidere la larghezza della foto singola (es. 0.7 della pagina)
     \includegraphics[width=0.7\textwidth]{Giacomo/Densita_degli_stati .png}
-    \caption{Soluzione dell'equazione di Shrodinger}
+    \caption{Solution of the Schrödinger equation.}
     \label{fig:foto3_sola}
 \end{figure}
 
