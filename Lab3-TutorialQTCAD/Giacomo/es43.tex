@@ -1,3 +1,4 @@
+The Q.vtu file contains the spatial probability density ($|\psi(\mathbf{r})|^2$) of the electron for the energy eigenstates solved by the Schrödinger equation. We begin by observing the 2D density maps obtained by slicing the plane at $z = -2.5$.
 
 % --- PRIMO BLOCCO: Due immagini affiancate ---
 \begin{figure}[htbp]
@@ -22,6 +23,11 @@
     \caption{Soluzione dell'equazione di Shrodinger}
 \end{figure}
 
+The results show that the ground state is strongly localized within one specific quantum dot, while the first excited state is localized in the second dot.
+
+This observation is fundamental to notice a clear asymmetry in the system. In this simulation, the asymmetry is introduced by the adaptive mesh, which slightly alters the confinement potential. However, this is needed to simulate a real physical scenario: at a fabrication level, it is impossible to make two completely identical quantum dots. Because of this physical asymmetry, the first two states of the entire system are essentially the individual ground states of each dot, which sit at slightly different energies.
+
+One way to see these energy differences is by analyzing the following graph:
 
 % --- SECONDO BLOCCO: Immagine singola ---
 \begin{figure}[htbp]
@@ -31,3 +37,10 @@
     \caption{Soluzione dell'equazione di Shrodinger}
     \label{fig:foto3_sola}
 \end{figure}
+
+This plot was made along the middle of the y-axis. It shows the density of states at different positions on the chip.
+
+If we look at the Ground State (green curve) and the First Excited State (black curve), both have a bell shape (a Gaussian peak). This confirms that the electron is strongly localized in a specific space, just like we saw in the 2D maps.
+
+Since we know the physical structure of the material, we can see that the top of each curve is exactly in the center of its quantum dot. The Ground State curve has its highest point on the left (around x = 30), which shows the exact location of the first dot. On the other hand, the First Excited State curve has its highest point on the right (around x = 70), showing the center of the second dot.
+Finally, if we compare the two curves, they are very similar with one difference: the peak of the First Excited State (black) is taller than the peak of the Ground State (green) by just a little bit. This little difference confirms the asymmetric behavior of the two quantum dots. The taller peak of the First Excited State means that the second dot confines the electron more tightly in a smaller space. Because the electron is squeezed in a narrower space, its energy increases slightly. This perfectly explains why this ground state for the single dot represents the excited state for the two-dot system.
