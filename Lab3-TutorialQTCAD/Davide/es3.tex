@@ -88,6 +88,7 @@ Ew = mt.Si.Eg/2 + mt.Si.chi
 dvc.new_gate_bnd("barrier_gate_1_bnd", barrier_gate_1_bias, Ew)
 \end{lstlisting}
 
+\newpage
 The arguments of \texttt{new\_gate\_bnd} are:
 \begin{itemize}
     \item the name of the physical surface on which the boundary condition is applied;
@@ -142,6 +143,7 @@ Therefore, the materials that compound the dot region are:
 
 This confirms that the active region used by the solvers is not only the silicon island itself, but the local portion of the structure that determines the confinement and dielectric screening around it.
 
+\newpage
 \section{Poisson and Schrodinger Solver Setup and Execution}
 The concluding part of the script is devoted to the definition of the Poisson and Schrodinger solvers, the assignment of their parameters, and the execution of the corresponding calculations. The structure of the script is summarized in Table~\ref{tab:solver-lines}.
 

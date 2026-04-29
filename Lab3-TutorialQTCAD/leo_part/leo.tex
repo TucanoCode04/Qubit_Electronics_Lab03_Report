@@ -7,7 +7,7 @@ the width of the portion of the device where the quantum dots will be defined. T
 Then, along the y direction, the lenghts of the plunger gates, barrier gates, source/drain and the gaps between them are defined, which are summerized in the following scheme (\ref{qdoty}):
 \begin{figure}[h]
 \center
-\includegraphics[width=1\textwidth]{leo_part/dqdot_y.jpeg}
+\includegraphics[width=0.8\textwidth, height=0.3\textwidth]{leo_part/dqdot_y.jpeg}
 \caption{Scheme of the double quantum dot structure along the y direction, all the dimensions are in nm.}
 \label{qdoty}
 \end{figure}
@@ -43,6 +43,7 @@ At the end of the script, the structure is saved in two different formats, each 
     \item \textbf{.geo\_unrolled:} This is a "flat" version of the geometry script. Since the original code uses loops (\texttt{For}) and variables, the unrolled version expands everything into raw, explicit Gmsh commands. It is extremely useful for debugging, as it allows the user to see exactly which tags and IDs were assigned to every single point, line, or surface created during the generation process. However, The use of the \texttt{OpenCASCADE} kernel and advanced boolean operations like \texttt{BooleanFragments} leads to a \texttt{.geo\_unrolled} file that contains a \texttt{Merge} command pointing to a \texttt{.xao} file, where Gmsh serializes the internal CAD state into the \texttt{.xao} (OpenCASCADE ASCII) format, which stores the Boundary Representation (B-Rep) of the fragmented structure.
 \end{itemize}
 
+\newpage
 \section{Mesh generation and visualization}
 After executing the Gmsh script, several files are automatically generated in the working directory:
 \begin{itemize}
@@ -55,7 +56,7 @@ As discussed previously, the \texttt{.geo\_unrolled} file in this case does not 
 \section{Dimensions and Geometric Analysis}
 \begin{figure}[H]
     \center  
-    \includegraphics[width=1\textwidth]{leo_part/mesh_imag.png}
+    \includegraphics[width=0.7\textwidth]{leo_part/mesh_imag.png}
     \caption{Image of the resulting mesh of the device}
     \label{mesh_figure}
 \end{figure}
