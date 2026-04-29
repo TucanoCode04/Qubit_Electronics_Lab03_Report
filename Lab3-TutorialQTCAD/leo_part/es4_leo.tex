@@ -1,5 +1,5 @@
-\chapter{Simulation: file EC.vtu}
-\section{Analysis of the energy levels}
+\section{File EC.vtu}
+\subsection{Analysis of the energy levels}
 After importing the file \texttt{DQD-EC.vtu} through the Paraview software,
 we can analyze the energy values of the bottom of the conduction band in the different regions of the device.
 For our porpuses, we first perform a "slice" of the 3D structure along the plane $z=-2.5$nm: we choose to do it at this 
@@ -8,10 +8,24 @@ In particular, the Silicon layer where the quantum dots are formed extends from 
 
 \begin{figure}[h]
 \center
-\includegraphics[width=1\textwidth]{leo_part/ec_topview.png}
+\includegraphics[width=0.7\textwidth]{leo_part/ec_topvieww.png}
 \caption{Top view of the conduction band energy levels within the channel, the colorbar is in eV.}
 \label{ec_topview}
 \end{figure}
 
-As we can see in the figure \ref{ec_topview}, the energy levels follow 
+As we can see in the figure \ref{ec_topview}, the energy levels, indicated by the colorbar in the bottom right, appear to be higher
+in the regions corresponding to the barrier gates while they are lower in the regions below the plunger gates. This is consistent with the 
+values of the potential applied to the gates, which are set to 0.5V for the barrier gates and 0.6V for the plunger gates.
+This particular configuration can be seen more precisely by analyzing the plot of the conduction band energy along the y direction, which is shown in the figure \ref{plot_ec}.
 
+\begin{figure}[h]
+\center
+\includegraphics[width=0.7\textwidth]{leo_part/graph_ec.png}
+\caption{Plot of the conduction band energy along the y direction at $z=-2.5$nm}
+\label{plot_ec}
+\end{figure}
+
+From the plot we can clearly observe the formation of barriers and wells in the channel: in correspondence of the barrier gates that separate
+the drain and source from the quantum dots, the energy levels are higher representing an energy barrier for the electrons, while below the plunger gates we can appreciate
+the formation of two wells where the eventual electron occupying the quantum dot would be confined. Finally, the central barrier gate, where a slightly higher potential is applied in comparison to the other two barrier gates, 
+creates a higher energy barrier that has the role of separating the two quantum dots and controlling (in this case suppressing) the tunneling between them. 

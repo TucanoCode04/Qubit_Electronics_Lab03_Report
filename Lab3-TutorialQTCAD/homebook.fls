@@ -283,6 +283,21 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx8.tfm
 INPUT ./es 4 Zio pera/es4.tex
 INPUT ./es 4 Zio pera/es4.tex
 INPUT es 4 Zio pera/es4.tex
+INPUT ./leo_part/es4_leo.tex
+INPUT ./leo_part/es4_leo.tex
+INPUT leo_part/es4_leo.tex
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm
+INPUT ./leo_part/ec_topvieww.png
+INPUT ./leo_part/ec_topvieww.png
+INPUT ./leo_part/ec_topvieww.png
+INPUT ./leo_part/ec_topvieww.png
+INPUT ./leo_part/ec_topvieww.png
+INPUT ./leo_part/graph_ec.png
+INPUT ./leo_part/graph_ec.png
+INPUT ./leo_part/graph_ec.png
+INPUT ./leo_part/graph_ec.png
+INPUT ./leo_part/graph_ec.png
 INPUT ./Davide/es42.tex
 INPUT ./Davide/es42.tex
 INPUT Davide/es42.tex
@@ -303,6 +318,7 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmss17.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb

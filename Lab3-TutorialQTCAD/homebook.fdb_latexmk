@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex homebook.idx"] 1777455818.42466 "homebook.idx" "homebook.ind" "homebook" 1777455821.561 0
-  "homebook.idx" 1777455819.36372 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex homebook.idx"] 1777455818.42466 "homebook.idx" "homebook.ind" "homebook" 1777457903.74612 0
+  "homebook.idx" 1777457901.42148 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "homebook.ilg"
   "homebook.ind"
   (rewritten before read)
-["pdflatex"] 1777455818.63431 "/home/klakson/Desktop/uni_master/first_year/second_semester/Qubit Electronics/labs/lab3/report/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" "homebook.pdf" "homebook" 1777455821.56128 0
+["pdflatex"] 1777457900.69331 "/home/klakson/Desktop/uni_master/first_year/second_semester/Qubit Electronics/labs/lab3/report/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" "homebook.pdf" "homebook" 1777457903.74645 0
   "/etc/texmf/web2c/texmf.cnf" 1774005325.26675 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/klakson/Desktop/uni_master/first_year/second_semester/Qubit Electronics/labs/lab3/report/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" 1777455697.08536 3022 7b388ce83accb98d89faf5fd80b6da9a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -92,6 +92,7 @@
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr5.tfm" 1254269338 12020 46464c854bf317de2a7a0bbe4a1160ca ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr7.tfm" 1254269338 12064 09aa3eeac96bf141d673bb1b0385ce55 ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr8.tfm" 1254269338 12064 a35db870f0b76c338d749c56dc030ef5 ""
+  "/usr/share/texmf/fonts/tfm/public/lm/ec-lmss10.tfm" 1254269338 11176 53ebf7a171df1f9447b387b178768bb5 ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmss12.tfm" 1254269338 11232 955a7245396175d9219648eadc654ac9 ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm" 1254269338 11252 57c8b53a3aeebba8c17658d4221d47ec ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmssbx10.tfm" 1254269338 11168 06d87f5698fd1b642d96449b7c8d90b0 ""
@@ -118,6 +119,7 @@
   "/usr/share/texmf/fonts/type1/public/lm/lmr17.pfb" 1255129361 119752 1bd8d06e4079df624bf59ce3ad7c9aa6 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmr7.pfb" 1255129361 121145 68312a933e2c689ed40ec0aba373e279 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb" 1255129361 122174 a7a08406857c9530a0320a2517f60370 ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmss10.pfb" 1255129361 97408 f595704ec2a07246c2d6f7b602587452 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss12.pfb" 1255129361 96107 daf52840b555e3b38f9679b629b5e2df ""
   "/usr/share/texmf/fonts/type1/public/lm/lmss17.pfb" 1255129361 97155 77b0a2ea02ee9c950117adae5f41f9c9 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb" 1255129361 119663 e82fa1a58f98ccd89bdbd77311ac9cf1 ""
@@ -141,12 +143,15 @@
   "Davide/es3.tex" 1777285893.58554 10604 9cc6f71128f36a18eea665fa440c249d ""
   "Davide/es42.tex" 1777455817.62051 811 1840d4b1c3caf5c80f9f76a8c583cc3a ""
   "Intro/intro.tex" 1777455480.63476 464 cd5729ec18565ec2fc8f0ec189653bad ""
-  "es 4 Zio pera/es4.tex" 1777455480.63543 71 5f93a6d55c312a48e98800a6f2ba8df1 ""
-  "homebook.aux" 1777455821.38666 4581 eb65c170467d01af931a5347a1f15432 "pdflatex"
+  "es 4 Zio pera/es4.tex" 1777456139.98209 100 09fdf9529434da040954c06de2309934 ""
+  "homebook.aux" 1777457903.55894 5305 811afec4563e012bf6204106dcdaf69e "pdflatex"
   "homebook.ind" 1777455818.60853 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
   "homebook.tex" 1777455697.08536 3022 7b388ce83accb98d89faf5fd80b6da9a ""
-  "homebook.toc" 1777455821.38819 1322 9e6b7caa38141c62b453023e677cf997 "pdflatex"
+  "homebook.toc" 1777457903.56046 1465 b2b10d8bc46599c627abbd3dd182562d "pdflatex"
   "leo_part/dqdot_y.jpeg" 1777275518.32309 50011 bb48dc320c6b92167811670f5d8f8145 ""
+  "leo_part/ec_topvieww.png" 1777457861.25589 39366 51f7dad4f16ce64c9d3aea7a506eb59f ""
+  "leo_part/es4_leo.tex" 1777457900.27577 2462 7208b4edc9ffd42665a9a3351e13a31e ""
+  "leo_part/graph_ec.png" 1777456667.21142 21778 f235d66396c2e2db90057c1644fb970c ""
   "leo_part/leo.tex" 1777285392.53614 8078 586d40fb5110fbe34ff359944fbcc3e1 ""
   "leo_part/mesh_imag.png" 1777284324.27303 575643 3f09b0213c9e46931d147fdf1c43138b ""
   "logopoli.png" 1774882310.73026 312859 163d44ec6d244c6e95dd034bbd631798 ""

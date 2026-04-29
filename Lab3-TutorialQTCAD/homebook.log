@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.20)  29 APR 2026 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.20)  29 APR 2026 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,7 +463,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 17.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 19.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -551,31 +551,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--176
 
 [6]) (./es 4 Zio pera/es4.tex
 Chapter 4.
-(./Davide/es42.tex
-<Davide/Prova.png, id=52, 1565.85pt x 831.105pt>
+(./leo_part/es4_leo.tex [7]
+<leo_part/ec_topvieww.png, id=56, 794.97pt x 531.9875pt>
+File: leo_part/ec_topvieww.png Graphic file (type png)
+<use leo_part/ec_topvieww.png>
+Package pdftex.def Info: leo_part/ec_topvieww.png  used on input line 11.
+(pdftex.def)             Requested size: 308.71104pt x 206.58948pt.
+<leo_part/graph_ec.png, id=57, 781.92125pt x 517.935pt>
+File: leo_part/graph_ec.png Graphic file (type png)
+<use leo_part/graph_ec.png>
+Package pdftex.def Info: leo_part/graph_ec.png  used on input line 23.
+(pdftex.def)             Requested size: 308.71104pt x 204.48328pt.
+) (./Davide/es42.tex [8 <./leo_part/ec_topvieww.png (PNG copy)> <./leo_part/graph_ec.png>]
+<Davide/Prova.png, id=62, 1565.85pt x 831.105pt>
 File: Davide/Prova.png Graphic file (type png)
 <use Davide/Prova.png>
 Package pdftex.def Info: Davide/Prova.png  used on input line 5.
 (pdftex.def)             Requested size: 308.71104pt x 130.2065pt.
- [7])) [8 <./Davide/Prova.png (PNG copy)>] (./homebook.aux)
+)) [9 <./Davide/Prova.png (PNG copy)>] (./homebook.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 13950 strings out of 474222
- 278964 string characters out of 5748733
+ 14006 strings out of 474222
+ 280065 string characters out of 5748733
  1957975 words of memory out of 5000000
- 35702 multiletter control sequences out of 15000+600000
- 687866 words of font info for 258 fonts, out of 8000000 for 9000
+ 35730 multiletter control sequences out of 15000+600000
+ 694640 words of font info for 274 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,11n,80p,1152b,1410s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on homebook.pdf (10 pages, 1026912 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on homebook.pdf (11 pages, 1109363 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 90651 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 94757 words of extra memory for PDF output out of 106986 (max. 10000000)
 

@@ -14,4 +14,6 @@
 \contentsline {section}{\numberline {3.5}Poisson and Schrodinger Solver Setup and Execution}{6}{}%
 \contentsline {section}{\numberline {3.6}Physical interpretation}{7}{}%
 \contentsline {chapter}{\numberline {4}Simulation: Poisson and Schrodinger}{7}{}%
-\contentsline {section}{\numberline {4.1}File \texttt {N.vtu}}{8}{}%
+\contentsline {section}{\numberline {4.1}File EC.vtu}{7}{}%
+\contentsline {subsection}{\numberline {4.1.1}Analysis of the energy levels}{7}{}%
+\contentsline {section}{\numberline {4.2}File \texttt {N.vtu}}{9}{}%
