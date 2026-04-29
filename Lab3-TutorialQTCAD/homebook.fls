@@ -288,11 +288,11 @@ INPUT ./Davide/es42.tex
 INPUT Davide/es42.tex
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt12.tfm
-INPUT ./Davide/NFileParaView.png
-INPUT ./Davide/NFileParaView.png
-INPUT ./Davide/NFileParaView.png
-INPUT ./Davide/NFileParaView.png
-INPUT ./Davide/NFileParaView.png
+INPUT ./Davide/Prova.png
+INPUT ./Davide/Prova.png
+INPUT ./Davide/Prova.png
+INPUT ./Davide/Prova.png
+INPUT ./Davide/Prova.png
 INPUT homebook.aux
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb
