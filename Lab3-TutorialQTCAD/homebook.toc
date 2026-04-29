@@ -12,3 +12,5 @@
 \contentsline {section}{\numberline {2.4}Boundary conditions and definition of the dot region}{5}{}%
 \contentsline {section}{\numberline {2.5}Poisson and Schrodinger Solver Setup and Execution}{6}{}%
 \contentsline {section}{\numberline {2.6}Physical interpretation}{7}{}%
+\contentsline {chapter}{\numberline {3}Simulation: file EC.vtu}{7}{}%
+\contentsline {section}{\numberline {3.1}Analysis of the energy levels}{7}{}%
