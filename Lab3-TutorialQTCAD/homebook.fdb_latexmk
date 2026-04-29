@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex homebook.idx"] 1777453754.7489 "homebook.idx" "homebook.ind" "homebook" 1777454897.6065 0
-  "homebook.idx" 1777454896 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex homebook.idx"] 1777453754.7489 "homebook.idx" "homebook.ind" "homebook" 1777455737.00977 0
+  "homebook.idx" 1777455735 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "homebook.ilg"
   "homebook.ind"
   (rewritten before read)
-["pdflatex"] 1777454895.81502 "c:/Users/donat/Desktop/QubitElectronics_Labs/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" "homebook.pdf" "homebook" 1777454897.60688 0
+["pdflatex"] 1777455735.30763 "c:/Users/donat/Desktop/QubitElectronics_Labs/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" "homebook.pdf" "homebook" 1777455737.01007 0
   "C:/Users/donat/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1774352199 82862 5cfc99bb35d1c98f6fcb48c5cfcd7edb ""
   "C:/Users/donat/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1729692926 11948238 cef82a51cc5d8db5d373796a8632c032 ""
   "C:/Users/donat/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -134,16 +134,16 @@
   "C:/Users/donat/AppData/Local/Programs/MiKTeX/tex/latex/translations/dicts/translations-basic-dictionary-english.trsl" 1644048522 5588 0c1628daf15f4411ff1f463114c634a3 ""
   "C:/Users/donat/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/donat/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "Davide/NFileParaView.png" 1777454418 52580 f0fcf33529f5fdf0cb3302a1aaa4b54f ""
+  "Davide/Prova.png" 1777455272 43750 5ac8af13804df6d1b92ddeaa87ee919e ""
   "Davide/es3.tex" 1777285194 10604 9cc6f71128f36a18eea665fa440c249d ""
-  "Davide/es42.tex" 1777454672 798 a1d431664c239f875e268cabb75317ed ""
+  "Davide/es42.tex" 1777455734 811 1840d4b1c3caf5c80f9f76a8c583cc3a ""
   "Intro/intro.tex" 1777454893 464 cd5729ec18565ec2fc8f0ec189653bad ""
   "c:/Users/donat/Desktop/QubitElectronics_Labs/Qubit_Electronics_Lab03_Report/Lab3-TutorialQTCAD/homebook.tex" 1777454821 3169 7b388ce83accb98d89faf5fd80b6da9a ""
   "es 4 Zio pera/es4.tex" 1777454672 71 5f93a6d55c312a48e98800a6f2ba8df1 ""
-  "homebook.aux" 1777454897 4619 dca0c913b1e8c8be20476b19a70d57fe "pdflatex"
+  "homebook.aux" 1777455736 4619 dca0c913b1e8c8be20476b19a70d57fe "pdflatex"
   "homebook.ind" 1777453754 0 d41d8cd98f00b204e9800998ecf8427e "makeindex homebook.idx"
   "homebook.tex" 1777454821 3169 7b388ce83accb98d89faf5fd80b6da9a ""
-  "homebook.toc" 1777454897 1322 9e6b7caa38141c62b453023e677cf997 "pdflatex"
+  "homebook.toc" 1777455736 1322 9e6b7caa38141c62b453023e677cf997 "pdflatex"
   "leo_part/dqdot_y.jpeg" 1777282392 50011 abcaf409072d10c569a413a96e28d0c5 ""
   "leo_part/leo.tex" 1777453608 8161 586d40fb5110fbe34ff359944fbcc3e1 ""
   "leo_part/mesh_imag.png" 1777286795 575643 fa6f42ea1fa141816a4c1ce272983daa ""
